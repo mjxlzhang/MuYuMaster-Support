@@ -68,9 +68,8 @@
     <h2>先进技术应用（技术说明）</h2>
     <p>《木鱼敲敲》基于 <strong>iOS 17+ 最新 SwiftUI 技术栈</strong> 构建，积极采用苹果近年推出的先进 UI 与系统能力，为用户与审核团队提供透明的实现说明：</p>
     <ul>
-        <li><strong>Liquid Glass 液态玻璃材质</strong>：多处界面采用系统 <code>.regularMaterial</code> 毛玻璃材质（成就面板、底部悬浮栏、更换木鱼弹窗背景），呈现 iOS 17 的半透明层次质感。</li>
-        <li><strong>灵动岛（Dynamic Island）实时状态</strong>：自动敲击进行时，于灵动岛 / 实时活动区域展示运行状态与停止提示，充分利用 iPhone 14 Pro 及以上机型的全新交互区域。</li>
-        <li><strong>可替换 App 图标</strong>：通过系统 <code>CFBundleAlternateIcons</code> 能力，支持在主屏无缝切换不同风格的木鱼图标，无需重启 App。</li>
+        <li><strong>毛玻璃材质（.regularMaterial）</strong>：多处界面采用系统 <code>.regularMaterial</code> 毛玻璃材质（成就面板、底部悬浮栏、更换木鱼弹窗背景），呈现 iOS 17 的半透明层次质感。</li>
+        <li><strong>灵动岛风格状态胶囊（App 内自绘）</strong>：自动敲击进行时，在 App 内以灵动岛风格的状态胶囊展示运行进度与停止提示；该胶囊为 SwiftUI 自绘视图，<strong>未使用系统 Live Activity / 实时活动，不申请推送权限</strong>。</li>
         <li><strong>后台音频与后台自动敲击</strong>：基于 <code>AVAudioSession</code> 后台音频会话，锁屏与后台场景下仍可维持自动敲击与声音反馈。</li>
         <li><strong>iOS 17 原生触感反馈</strong>：敲击、切换等操作使用系统 <code>sensoryFeedback</code> 原生触觉，反馈精准且不打断音频。</li>
         <li><strong>原生分组与无障碍</strong>：设置页采用 iOS 17 Inset Grouped 原生分组样式，并遵循系统动态字体与深色模式。</li>
