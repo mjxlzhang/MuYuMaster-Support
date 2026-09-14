@@ -68,10 +68,14 @@
     <h2>先进技术应用（技术说明）</h2>
     <p>《木鱼敲敲》基于 <strong>iOS 17+ 最新 SwiftUI 技术栈</strong> 构建，积极采用苹果近年推出的先进 UI 与系统能力，为用户与审核团队提供透明的实现说明：</p>
     <ul>
+        <li><strong>Swift Observation（@Observable）</strong>：核心视图模型采用苹果全新的 Observation 框架，实现细粒度、按属性的 UI 刷新，替代旧有的 ObservableObject，运行更高效、动画更顺滑。</li>
+        <li><strong>SwiftUI TimelineView + Canvas 动画</strong>：木鱼旋转等动画由自包含的 <code>TimelineView</code> 驱动 <code>Canvas</code> 绘制，与数据模型解耦，避免重复渲染造成的图标闪烁/瞬隐。</li>
         <li><strong>毛玻璃材质（.regularMaterial）</strong>：多处界面采用系统 <code>.regularMaterial</code> 毛玻璃材质（成就面板、底部悬浮栏、更换木鱼弹窗背景），呈现 iOS 17 的半透明层次质感。</li>
         <li><strong>灵动岛风格状态胶囊（App 内自绘）</strong>：自动敲击进行时，在 App 内以灵动岛风格的状态胶囊展示运行进度与停止提示；该胶囊为 SwiftUI 自绘视图，<strong>未使用系统 Live Activity / 实时活动，不申请推送权限</strong>。</li>
         <li><strong>后台音频与后台自动敲击</strong>：基于 <code>AVAudioSession</code> 后台音频会话，锁屏与后台场景下仍可维持自动敲击与声音反馈。</li>
         <li><strong>iOS 17 原生触感反馈</strong>：敲击、切换等操作使用系统 <code>sensoryFeedback</code> 原生触觉，反馈精准且不打断音频。</li>
+        <li><strong>StoreKit 2 内购</strong>：会员订阅采用全新的 async/await StoreKit 2 API（<code>Product.products</code> / <code>Transaction.currentEntitlements</code> / <code>AppStore.sync</code>），购买与恢复更安全可靠。</li>
+        <li><strong>现代导航与并发</strong>：采用 <code>NavigationStack</code> 与 <code>presentationDetents</code> 实现现代导航与可调高度弹窗；音频、商店、动作识别等流程全面使用 Swift <code>async</code>/<code>await</code> 并发。</li>
         <li><strong>原生分组与无障碍</strong>：设置页采用 iOS 17 Inset Grouped 原生分组样式，并遵循系统动态字体与深色模式。</li>
     </ul>
     <p style="font-size:13px;color:var(--sub);">注：App 内置「桌面图标与小组件」预览界面，用于展示小组件样式与快捷入口；真实的主屏 WidgetKit 小组件正在规划中，后续版本将随系统能力持续演进。</p>
